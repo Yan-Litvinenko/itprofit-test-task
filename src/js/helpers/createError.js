@@ -1,8 +1,8 @@
 export const createError = (beforeElement) => {
-    let isValid = true;
-
     const error = document.createElement('div');
     error.classList.add('form__error_message');
+
+    let isValid = true;
 
     const addErrorElement = () => {
         if (!beforeElement.parentNode.querySelector('.form__error_message')) {
