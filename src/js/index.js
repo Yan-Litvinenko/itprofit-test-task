@@ -1,6 +1,7 @@
 import { formFieldHandler } from './helpers/formFieldHandler';
 import { giveMaskToElement } from './helpers/giveMaskToElement';
 import { formSubmit } from './helpers/formSubmit';
+import { modal } from './helpers/modal';
 import '../css/index.scss';
 
 const name = document.getElementById('name');
@@ -22,3 +23,4 @@ const formElements = [
 ];
 
 formSubmit(formElements);
+modal();
