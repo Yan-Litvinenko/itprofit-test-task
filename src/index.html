@@ -14,6 +14,7 @@
                         <label class="form__name" for="name">
                             <span>Имя</span>
                             <input
+                                autocomplete="off"
                                 id="name"
                                 maxlength="30"
                                 minlength="2"
@@ -26,17 +27,32 @@
 
                         <label class="form__email" for="email">
                             <span>E-mail</span>
-                            <input id="email" name="email" placeholder="Введите имя" required type="email" />
+                            <input
+                                autocomplete="off"
+                                id="email"
+                                name="email"
+                                placeholder="Введите имя"
+                                required
+                                type="email"
+                            />
                         </label>
 
                         <label class="form__phone" for="phone">
                             <span>Телефон</span>
-                            <input id="phone" name="phone" placeholder="Введите номер телефона" required type="tel" />
+                            <input
+                                autocomplete="off"
+                                id="phone"
+                                name="phone"
+                                placeholder="Введите номер телефона"
+                                required
+                                type="tel"
+                            />
                         </label>
 
                         <label class="form__message" for="message">
                             <span>Сообщение</span>
                             <textarea
+                                autocomplete="off"
                                 id="message"
                                 maxlength="300"
                                 minlength="10"
