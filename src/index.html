@@ -10,6 +10,7 @@
             <div class="container">
                 <div class="page">
                     <form class="form">
+                        <h1 class="form__title">Отправьте сообщение</h1>
                         <label class="form__name" for="name">
                             <span>Имя</span>
                             <input
@@ -17,7 +18,7 @@
                                 maxlength="30"
                                 minlength="2"
                                 name="name"
-                                pattern="[A-Za-zА-Яа-яЁё\s]+"
+                                placeholder="Введите имя"
                                 required
                                 type="text"
                             />
@@ -25,12 +26,12 @@
 
                         <label class="form__email" for="email">
                             <span>E-mail</span>
-                            <input type="email" id="email" name="email" required />
+                            <input id="email" name="email" placeholder="Введите имя" required type="email" />
                         </label>
 
                         <label class="form__phone" for="phone">
                             <span>Телефон</span>
-                            <input type="tel" id="phone" name="phone" required pattern="^(\+?\d{1,3}[- ]?)?\d{10}$" />
+                            <input id="phone" name="phone" placeholder="Введите номер телефона" required type="tel" />
                         </label>
 
                         <label class="form__message" for="message">
@@ -40,7 +41,7 @@
                                 maxlength="300"
                                 minlength="10"
                                 name="message"
-                                required
+                                placeholder="Введите ваше сообщение"
                                 required
                                 rows="4"
                             ></textarea>
