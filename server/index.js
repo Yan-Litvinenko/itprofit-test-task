@@ -5,33 +5,27 @@ const app = express();
 const port = 9090;
 
 app.use(cors());
+app.use(express.json());
 
-app.post('/api/registration', (req, res) => {
+app.post('/api/registration', (_, res) => {
     if (Math.random() > 0.5) {
-        res.statusCode = 400;
-
-        setTimeout(() => {
-            res.send({
-                status: 'error',
-                message: 'Bad request',
-            });
-        }, Math.random() * 1000);
-
-        return;
+        res.status(400).send({
+            status: 'error',
+            fields: {
+                name: 'Такой пользователь уже существует',
+                email: 'Такой email уже зарегистрирован',
+            },
+        });
     }
 
-    setTimeout(() => {
-        res.statusCode = 200;
-        res.send({
-            status: 'success',
-            message: 'You are registered',
-        });
-    }, Math.random() * 1000);
+    res.status(200).send({
+        status: 'success',
+        msg: 'Ваша заявка успешно отправлена!',
+    });
 });
 
-app.get('/api/ping', (req, res) => {
-    res.statusCode = 200;
-    res.send({
+app.get('/api/ping', (_, res) => {
+    res.status(200).send({
         status: 'success',
         message: 'Server is ready',
     });
