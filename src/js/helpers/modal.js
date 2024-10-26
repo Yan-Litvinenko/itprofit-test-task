@@ -1,3 +1,5 @@
+import { scrollManager } from './ScrollManager';
+
 export const modal = () => {
     const modal = document.getElementById('modal');
     const cross = document.getElementById('modal-cross');
@@ -5,7 +7,13 @@ export const modal = () => {
     const btnOpen = document.getElementById('open-modal');
 
     const toggleModal = () => {
-        modal.classList.toggle('modal_active');
+        const isActive = modal.classList.toggle('modal_active');
+
+        if (isActive) {
+            scrollManager.scrollOff();
+        } else {
+            scrollManager.scrollOn();
+        }
     };
 
     const closeModalOnOutsideClick = (event) => {
