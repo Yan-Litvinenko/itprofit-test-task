@@ -7,66 +7,79 @@
     </head>
     <body>
         <main>
-            <div class="container">
-                <div class="page">
-                    <form class="form" id="form">
-                        <h1 class="form__title">Отправьте сообщение</h1>
-                        <label class="form__name" for="name">
-                            <span>Имя</span>
-                            <input
-                                autocomplete="off"
-                                id="name"
-                                maxlength="30"
-                                minlength="2"
-                                name="name"
-                                placeholder="Введите имя"
-                                required
-                                type="text"
-                            />
-                        </label>
+            <section>
+                <div class="container">
+                    <div class="page">
+                        <form class="form" id="form">
+                            <h1 class="form__title">Отправьте сообщение</h1>
+                            <label class="form__name" for="name">
+                                <span>Имя</span>
+                                <input
+                                    autocomplete="off"
+                                    id="name"
+                                    maxlength="30"
+                                    minlength="2"
+                                    name="name"
+                                    placeholder="Введите имя"
+                                    required
+                                    type="text"
+                                />
+                            </label>
 
-                        <label class="form__email" for="email">
-                            <span>E-mail</span>
-                            <input
-                                autocomplete="off"
-                                id="email"
-                                name="email"
-                                placeholder="Введите имя"
-                                required
-                                type="email"
-                            />
-                        </label>
+                            <label class="form__email" for="email">
+                                <span>E-mail</span>
+                                <input
+                                    autocomplete="off"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Введите имя"
+                                    required
+                                    type="email"
+                                />
+                            </label>
 
-                        <label class="form__phone" for="phone">
-                            <span>Телефон</span>
-                            <input
-                                autocomplete="off"
-                                id="phone"
-                                name="phone"
-                                placeholder="Введите номер телефона"
-                                required
-                                type="tel"
-                            />
-                        </label>
+                            <label class="form__phone" for="phone">
+                                <span>Телефон</span>
+                                <input
+                                    autocomplete="off"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="Введите номер телефона"
+                                    required
+                                    type="tel"
+                                />
+                            </label>
 
-                        <label class="form__message" for="message">
-                            <span>Сообщение</span>
-                            <textarea
-                                autocomplete="off"
-                                id="message"
-                                maxlength="300"
-                                minlength="10"
-                                name="message"
-                                placeholder="Введите ваше сообщение"
-                                required
-                                rows="4"
-                            ></textarea>
-                        </label>
+                            <label class="form__message" for="message">
+                                <span>Сообщение</span>
+                                <textarea
+                                    autocomplete="off"
+                                    id="message"
+                                    maxlength="300"
+                                    minlength="10"
+                                    name="message"
+                                    placeholder="Введите ваше сообщение"
+                                    required
+                                    rows="4"
+                                ></textarea>
+                            </label>
 
-                        <button class="form__button" type="submit">Отправить</button>
-                    </form>
+                            <button class="form__button" type="submit">Отправить</button>
+                        </form>
+                    </div>
                 </div>
-            </div>
+            </section>
+
+            <button type="button" id="modal-button">Открыть модальное окно</button>
         </main>
+
+        <div class="modal" id="modal">
+            <div class="modal__content">
+                <span class="modal__close" id="closeModal">&times;</span>
+                <h2 class="modal__title">Модальное окно</h2>
+                <p class="modal__text">Это текст в модальном окне.</p>
+                <button class="modal__btn" type="button">Подтвердить</button>
+            </div>
+        </div>
     </body>
 </html>
